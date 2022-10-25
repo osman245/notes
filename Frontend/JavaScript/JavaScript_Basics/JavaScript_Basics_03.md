@@ -1,6 +1,6 @@
 # Objects and Object Constructors
 
-    In JavaScript there are multiple ways to do things. Many languages force you into using specific patterns and data structures in your code, but that is not true in JavaScript.
+In JavaScript there are multiple ways to do things. Many languages force you into using specific patterns and data structures in your code, but that is not true in JavaScript.
 
 Thus when buliding more and complex code, you need to be careful that your choosing appriopriate code to build on.
 The patterns we’ll be covering in this series are:
@@ -10,7 +10,7 @@ The patterns we’ll be covering in this series are:
 - Classes
 - ES6 Modules
 
-### To define objects, it most cases its best to use object literals
+### To define objects, in most cases its best to use object literals
 
 E.g)
 
@@ -229,4 +229,4 @@ Understand the basic do’s and don’t’s of prototypical inheritance.
 - If you plan on creating several instances of an object, you create one prototype outside the object, to reduce redundancy..
 - Explain what Object.create does
   How does this behave in different situations?
-  a method that creates a new object, using this object as the prototype of the newly created objecct
+  a method that creates a new object, using this object as the prototype of the newly created object.
