@@ -3,7 +3,7 @@
     InOrder to create an application using spring you needed ...
 
 - A project structure, complete with a a mvn or gradle build file including required dependencies
-- atleast Spring MVC and Servlet API dependencies installed
+- Atleast Spring MVC and Servlet API dependencies installed
 - A web.xml file that declares Spring's DispatcherServlet(dispatcher handles requests)
 - A Spring configuration that enables Spring MVC.
 - A web application server like tomcat to deploy the application to
@@ -46,7 +46,7 @@ return new JdbcTemplate(dataSource);
 
 **Starter dependencies**
 
-- When using the spring mvc framework we would have to have 8 dependencies in your build
+- When using the Spring MVC framework we would have to have 8 dependencies in your build
 
 ■ org.springframework:spring-core
 ■ org.springframework:spring-web
@@ -86,5 +86,5 @@ return new JdbcTemplate(dataSource);
 
 ## initializing a springboot project with spring initializer
 
-- using spring initializer helps us avoid the ardous process of creating a project structure, creating a build file with all the dependencies and all that from stratch.
+- using spring initializer helps us avoid the arduous process of creating a project structure, creating a build file with all the dependencies and all that from stratch.
 44s

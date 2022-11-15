@@ -43,7 +43,7 @@ myImage.setAttribute("src", "images/firefox-icon.png");
 - The code retrieves the value of the image's src attribute.
 - The code uses a conditional to check if the src value is equal to the path of the original image:
 
-- If it is, the code changes the src value to the path of the second image, forcing the other image to be loaded inside the <img> element.
+- If it is, the code changes the src value to the path of the second image, forcing the other image to be loaded inside the imgs element.
 - If it isn't (meaning it must already have changed), the src value swaps back to the original image path, to the original state.
 
 ### Other key takeaways from the DOM
@@ -61,3 +61,13 @@ myImage.setAttribute("src", "images/firefox-icon.png");
 - bookDiv.classList.add('add'), if you want to add a class(add) to the div(bookdiv) **you can declare the class and its properties in a stylesheet, and add them to any element.**
 - bookDiv.appendChild('insert element'); if you want to add a child into the parent (bookdiv) element
 - removeBtn.textContent = 'Remove'; if you want to add text content to the (removeBtn) element
+  -bookDiv.innerHtml = "iiii" ... innerHtml effects the text only , while textContent can effect the styling aswell
+
+copied from W3Schools
+
+The innerHTML property returns:
+The text content of the element, including all spacing and inner HTML tags.
+The innerText property returns:
+Just the text content of the element and all its children, without CSS hidden text spacing and tags, except <script> and <style> elements.
+The textContent property returns:
+The text content of the element and all descendaces, with spacing and CSS hidden text, but without tags.

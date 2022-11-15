@@ -31,3 +31,7 @@
 # dec 13 - dec 30
 
 - Study extensively for your exams
+
+# Jan 15
+
+- take it.
