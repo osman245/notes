@@ -22,3 +22,4 @@
   create a manifest yaml file... that runs redis...
 
 - kubectl create -f redis-definition.yaml (now create pod)
+

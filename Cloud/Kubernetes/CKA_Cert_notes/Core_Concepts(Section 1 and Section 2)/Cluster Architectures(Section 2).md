@@ -1,24 +1,33 @@
 ### Cluster Architecture
 
-- The purpose of kubernetes is to host your applications in from of containers in an automated fashion
-  to easily deploy instances of the application as requested, and easily communciate between services in your application.
+- The purpose of kubernetes is to host your applications in form of containers in an automated fashion
+  to easily deploy instances of the application as requested, and easily communicate between services in your application.
 
--(ships) Worker nodes: nodes that host applications as containers..
--(control ship) master node: manage,monitor nodes
+**Boat analogy to describe different components of kubernetes**
 
--ETCD cluster: Stores data in a key:value format..
+- (ships) Worker nodes: nodes that host applications as containers..
+- (control ship) master node: manage,plans,schedule,monitor worker nodes
 
-- Kube-scheduler(crane): Schedules the right pod to put a node on depending on size/capacity...
+- ETCD cluster: database that stores data(maintain info on the nodes) in a "key:value" format..
+- Kube-scheduler(crane): if pods are destroyed it schedules the right pod to put a node on depending on size/capacity/num of containers already in node and E.T.C...
 
-- Node-controller/replica controller takes care of nodes, onboarding nodes if nodes running...
 
-- Kube-apiserver: Used by External Viewers, orchestrates all operations in the cluster...
-- (captain of ship) kubelet is an agent that runs on each cluster.... fetches status of nodes and containers in them. Destroys nodes.
+Controller-manager:
+- Node-controller: Takes care of nodes, Onboarding nodes if nodes are running... 
+- Replication controller: makes sure Desired number of containers are running at the same time 
+
+- Kube-apiServer:
+  Used by External Viewers, orchestrates all operations in the cluster...
+  (captain of ship) kubelet is an agent that runs on each cluster.... fetches status of nodes and containers in them. Destroys nodes.
 
 - Kube-proxy: Allows containers to reach each other. Enables communication between services
 
 - Runtime of containers in node can be docker
-  ![kubeArchitect.jpg](kubeArchitect.jpg)
+
+![img_12.png](kubearchitect2.png)
+**review stopped here**
+
+  ![kubeArchitect.jpg](img/kubeArchitect.jpg)
 
 - Kubectl get pods kubesystems
 - Get all pods n the kubesystem namespace
