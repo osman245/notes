@@ -241,12 +241,28 @@ a pod.
 ![img_4.png](img_4.png)
 
 **Questions**
-Q: Create a configmap that the new scheduler will employ 
-using the conecpt of Configmap as a volumee. Create a configmap with name my-scheduler-confug using the content of file
-/root/my-scheduler-config.yaml...
-A: kubectl create configmap --name my-scheduler-config
---from-file=/root/my-scheduler-config.yaml -n kubesystem..
 
+Q: Create a configmap that the new scheduler will employ 
+using the concept of Configmap as a volume. Create a configmap with name my-scheduler-confug using the content of file
+/root/my-scheduler-config.yaml...
+A: kubectl create configmap my-scheduler-config
+--from-file=/root/my-scheduler-config.yaml -n kubesystem..
+- I don't understand --from-file keyword
+- kube-system is the namespace for objects created by the Kubernetes system. Typically, this would contain pods like kube-dns , kube-proxy , kubernetes-dashboard and stuff like fluentd, heapster, ingresses and so on (copied online)
+
+
+
+### Scheduler Profiles  *
+**comeback to make notes on this**
+There are 4 phases in a scheduler:
+scheduling queue,filtering,scoring,binding
+- pod on scheduling queue
+- filter out based on lack of resources
+- score based on free space...
+- pod finally gets binded with the node
+
+
+if we have different schedulers, they run as diff rp
 
 
 

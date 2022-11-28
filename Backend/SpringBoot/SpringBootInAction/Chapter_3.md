@@ -79,10 +79,56 @@ application
 8 Property sources specified by @PropertySource
 9 Default properties
 
-**precedence lvls**
+**Precedence Lvls**
 1 Externally, in a /config subdirectory of the directory from which the application is run
 2 Externally, in the directory from which the application is run
 3 Internally, in a package named “config”
 4 Internally, at the root of the classpath
 
 **pg76**
+
+**Fine Tuning AutoConfiguration**
+
+- There are well over 300 properties that you can set to tweak and adjust the beans in a Spring Boot Application
+- thymeleaf templates are cached by default for greater application performance, but this can easily be disabled by a command line argument
+  java -jar readinglist-0.0.1-SNAPSHOT.jar --spring.thymeleaf.cache=false
+
+or in the application file, turning it off every time you run the application.
+spring:
+thymeleaf:
+cache: false
+
+Or disable it forever using an environment variable
+
+- export spring_thymeleaf_cache=false
+
+- Enable server to serve securely over HTTPS by creating a keystore usingthe JDK's keytool utility.
+- keytool -keystore mykeys.jks -genkey -alias tomcat -keyalg RSA
+
+Server:
+
+```
+port: 8443
+ssl:
+key-store: file:///path/to/mykeys.jks
+key-store-password: letmein
+key-password: letmein
+```
+
+- To esxclude logback transistive dependency..
+
+```
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter</artifactId>
+<exclusions>
+<exclusion>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-logging</artifactId>
+</exclusion>
+</exclusions>
+</dependency>
+```
+
+When autoconfiguration doesn’t fit your needs, Spring Boot allows you to override and fine-tune
+the configuration it provides.
