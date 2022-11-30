@@ -70,3 +70,20 @@ With Spring:
   DispatcherServletAutoConfiguration class being matched means its autoconfiguration is enabled.
 
 ### SpringBoot Application Execution Process
+1.) Spring boot application execution will start from main() method.
+2.) The main() method internally call SpringApplication.run() method
+3.) SpringApplication.run()(returns configurable application context) method performs Bootstraping for our spring boot application
+4.) Starts stopwatch to identify time taken to bootstrap the springboot application
+5.) prepares environment to run our springboot application(dev)
+6.) Print banner(the spring print in console
+7.) Start the IOC container (ApplicationContext) base on the
+classpath(default, web servlet)
+8.) Refresh context
+
+### Types of Springboot Applications
+- There are 3 different types of Springboot Applications 
+There's the spring-booter starter. which is the default application. Where we have the springboot starter dependdency
+in the classpath
+- Theres the spring-boot-starter-web.If we have spring-boot-starter-webflux. 
+
+min: 1:11pm
